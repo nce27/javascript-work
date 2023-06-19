@@ -11,10 +11,23 @@
 //   counter++;
 // }
 
-for (let x = 0 ; x <= 20 ; x++) {
-  if (x % 2 === 0){
-    console.log(`${x} is even`)
+// for (let x = 0 ; x <= 20 ; x++) {
+//   if (x % 2 === 0){
+//     console.log(`${x} is even`)
+//   } else {
+//     console.log(`${x} is odd`)
+//   }
+// }
+
+const oddOrEven = (number) => {
+  if (number % 2 === 0){
+    return 'even';
   } else {
-    console.log(`${x} is odd`)
+    return 'odd';
   }
 }
+
+for (let x = 0 ; x <= 20 ; x++) {
+  const parity = oddOrEven(x)
+  console.log(`${x} is ${parity(x)}`);
+  }
